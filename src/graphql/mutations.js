@@ -1,124 +1,6 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createTaller = /* GraphQL */ `
-  mutation CreateTaller(
-    $input: CreateTallerInput!
-    $condition: ModelTallerConditionInput
-  ) {
-    createTaller(input: $input, condition: $condition) {
-      id
-      name
-      direccion
-      correo
-      mision
-      vision
-      descripcionLaboral
-      otro
-      logo
-      tecnicos {
-        items {
-          id
-          name
-          cargo
-          tallerID
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      clientes {
-        id
-        name
-        numeroTelefono
-        correo
-        ordenServicio {
-          nextToken
-        }
-        equipo {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      ofertasTrabajo {
-        items {
-          id
-          tallerID
-          titulo
-          contenido
-          fecha
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      telefonos
-      administradorID
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateTaller = /* GraphQL */ `
-  mutation UpdateTaller(
-    $input: UpdateTallerInput!
-    $condition: ModelTallerConditionInput
-  ) {
-    updateTaller(input: $input, condition: $condition) {
-      id
-      name
-      direccion
-      correo
-      mision
-      vision
-      descripcionLaboral
-      otro
-      logo
-      tecnicos {
-        items {
-          id
-          name
-          cargo
-          tallerID
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      clientes {
-        id
-        name
-        numeroTelefono
-        correo
-        ordenServicio {
-          nextToken
-        }
-        equipo {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
-      ofertasTrabajo {
-        items {
-          id
-          tallerID
-          titulo
-          contenido
-          fecha
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      telefonos
-      administradorID
-      createdAt
-      updatedAt
-    }
-  }
-`;
 export const deleteTaller = /* GraphQL */ `
   mutation DeleteTaller(
     $input: DeleteTallerInput!
@@ -233,6 +115,22 @@ export const createTecnico = /* GraphQL */ `
       name
       cargo
       tallerID
+      ordenServicio {
+        items {
+          id
+          numero
+          estado
+          tecnicoID
+          clienteID
+          fechaDeFinalizado
+          equipoID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
       taller {
         id
         name
@@ -262,22 +160,6 @@ export const createTecnico = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      ordenServicio {
-        items {
-          id
-          numero
-          estado
-          tecnicoID
-          clienteID
-          fechaDeFinalizado
-          equipoID
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -291,6 +173,22 @@ export const updateTecnico = /* GraphQL */ `
       name
       cargo
       tallerID
+      ordenServicio {
+        items {
+          id
+          numero
+          estado
+          tecnicoID
+          clienteID
+          fechaDeFinalizado
+          equipoID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
       taller {
         id
         name
@@ -320,22 +218,6 @@ export const updateTecnico = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      ordenServicio {
-        items {
-          id
-          numero
-          estado
-          tecnicoID
-          clienteID
-          fechaDeFinalizado
-          equipoID
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -349,6 +231,22 @@ export const deleteTecnico = /* GraphQL */ `
       name
       cargo
       tallerID
+      ordenServicio {
+        items {
+          id
+          numero
+          estado
+          tecnicoID
+          clienteID
+          fechaDeFinalizado
+          equipoID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
       taller {
         id
         name
@@ -378,22 +276,6 @@ export const deleteTecnico = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      ordenServicio {
-        items {
-          id
-          numero
-          estado
-          tecnicoID
-          clienteID
-          fechaDeFinalizado
-          equipoID
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -619,6 +501,11 @@ export const createOrdenServicio = /* GraphQL */ `
         name
         cargo
         tallerID
+        ordenServicio {
+          nextToken
+        }
+        createdAt
+        updatedAt
         taller {
           id
           name
@@ -634,11 +521,6 @@ export const createOrdenServicio = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        ordenServicio {
-          nextToken
-        }
-        createdAt
-        updatedAt
       }
       clienteID
       cliente {
@@ -701,6 +583,11 @@ export const updateOrdenServicio = /* GraphQL */ `
         name
         cargo
         tallerID
+        ordenServicio {
+          nextToken
+        }
+        createdAt
+        updatedAt
         taller {
           id
           name
@@ -716,11 +603,6 @@ export const updateOrdenServicio = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        ordenServicio {
-          nextToken
-        }
-        createdAt
-        updatedAt
       }
       clienteID
       cliente {
@@ -783,6 +665,11 @@ export const deleteOrdenServicio = /* GraphQL */ `
         name
         cargo
         tallerID
+        ordenServicio {
+          nextToken
+        }
+        createdAt
+        updatedAt
         taller {
           id
           name
@@ -798,11 +685,6 @@ export const deleteOrdenServicio = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        ordenServicio {
-          nextToken
-        }
-        createdAt
-        updatedAt
       }
       clienteID
       cliente {
@@ -858,6 +740,23 @@ export const createOfertaTrabajo = /* GraphQL */ `
     createOfertaTrabajo(input: $input, condition: $condition) {
       id
       tallerID
+      titulo
+      contenido
+      fecha
+      aspirantes {
+        items {
+          id
+          name
+          numeroTelefono
+          correo
+          ofertaTrabajoID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
       taller {
         id
         name
@@ -887,23 +786,6 @@ export const createOfertaTrabajo = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      titulo
-      contenido
-      fecha
-      aspirantes {
-        items {
-          id
-          name
-          numeroTelefono
-          correo
-          ofertaTrabajoID
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -915,6 +797,23 @@ export const updateOfertaTrabajo = /* GraphQL */ `
     updateOfertaTrabajo(input: $input, condition: $condition) {
       id
       tallerID
+      titulo
+      contenido
+      fecha
+      aspirantes {
+        items {
+          id
+          name
+          numeroTelefono
+          correo
+          ofertaTrabajoID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
       taller {
         id
         name
@@ -944,23 +843,6 @@ export const updateOfertaTrabajo = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      titulo
-      contenido
-      fecha
-      aspirantes {
-        items {
-          id
-          name
-          numeroTelefono
-          correo
-          ofertaTrabajoID
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -972,6 +854,23 @@ export const deleteOfertaTrabajo = /* GraphQL */ `
     deleteOfertaTrabajo(input: $input, condition: $condition) {
       id
       tallerID
+      titulo
+      contenido
+      fecha
+      aspirantes {
+        items {
+          id
+          name
+          numeroTelefono
+          correo
+          ofertaTrabajoID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
       taller {
         id
         name
@@ -1001,23 +900,6 @@ export const deleteOfertaTrabajo = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      titulo
-      contenido
-      fecha
-      aspirantes {
-        items {
-          id
-          name
-          numeroTelefono
-          correo
-          ofertaTrabajoID
-          createdAt
-          updatedAt
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -1035,6 +917,14 @@ export const createAspirante = /* GraphQL */ `
       ofertaTrabajo {
         id
         tallerID
+        titulo
+        contenido
+        fecha
+        aspirantes {
+          nextToken
+        }
+        createdAt
+        updatedAt
         taller {
           id
           name
@@ -1050,14 +940,6 @@ export const createAspirante = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        titulo
-        contenido
-        fecha
-        aspirantes {
-          nextToken
-        }
-        createdAt
-        updatedAt
       }
       createdAt
       updatedAt
@@ -1078,6 +960,14 @@ export const updateAspirante = /* GraphQL */ `
       ofertaTrabajo {
         id
         tallerID
+        titulo
+        contenido
+        fecha
+        aspirantes {
+          nextToken
+        }
+        createdAt
+        updatedAt
         taller {
           id
           name
@@ -1093,14 +983,6 @@ export const updateAspirante = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        titulo
-        contenido
-        fecha
-        aspirantes {
-          nextToken
-        }
-        createdAt
-        updatedAt
       }
       createdAt
       updatedAt
@@ -1121,6 +1003,14 @@ export const deleteAspirante = /* GraphQL */ `
       ofertaTrabajo {
         id
         tallerID
+        titulo
+        contenido
+        fecha
+        aspirantes {
+          nextToken
+        }
+        createdAt
+        updatedAt
         taller {
           id
           name
@@ -1136,14 +1026,6 @@ export const deleteAspirante = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        titulo
-        contenido
-        fecha
-        aspirantes {
-          nextToken
-        }
-        createdAt
-        updatedAt
       }
       createdAt
       updatedAt
@@ -1565,6 +1447,124 @@ export const deleteComment = /* GraphQL */ `
       }
       content
       username
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createTaller = /* GraphQL */ `
+  mutation CreateTaller(
+    $input: CreateTallerInput!
+    $condition: ModelTallerConditionInput
+  ) {
+    createTaller(input: $input, condition: $condition) {
+      id
+      name
+      direccion
+      correo
+      mision
+      vision
+      descripcionLaboral
+      otro
+      logo
+      tecnicos {
+        items {
+          id
+          name
+          cargo
+          tallerID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      clientes {
+        id
+        name
+        numeroTelefono
+        correo
+        ordenServicio {
+          nextToken
+        }
+        equipo {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      ofertasTrabajo {
+        items {
+          id
+          tallerID
+          titulo
+          contenido
+          fecha
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      telefonos
+      administradorID
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateTaller = /* GraphQL */ `
+  mutation UpdateTaller(
+    $input: UpdateTallerInput!
+    $condition: ModelTallerConditionInput
+  ) {
+    updateTaller(input: $input, condition: $condition) {
+      id
+      name
+      direccion
+      correo
+      mision
+      vision
+      descripcionLaboral
+      otro
+      logo
+      tecnicos {
+        items {
+          id
+          name
+          cargo
+          tallerID
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      clientes {
+        id
+        name
+        numeroTelefono
+        correo
+        ordenServicio {
+          nextToken
+        }
+        equipo {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      ofertasTrabajo {
+        items {
+          id
+          tallerID
+          titulo
+          contenido
+          fecha
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      telefonos
+      administradorID
       createdAt
       updatedAt
     }
